@@ -1,23 +1,15 @@
 #include <iostream>
-
-double f(int x);
+#include <math.h>
 
 int main(void)
 {
-    std::cout <<"ingrese el número de elementos a ver"<<std::endl;
-    int N;
-    std::cin>>N;
-    for(int i= 0; i<N;i++)
-    {
-     if(i%2 == 0)   
-     {
-       std::cout << f(i)<<"\t"<<i<<std::endl; 
-     }
-    }
+    float pi= M_PI;
+    std::cout <<"ingrese el radio de su círculo:"<<std::endl;
+    float r;
+    std::cin>>r;
+    float diametro = 2*r;
+    float perimetro= 2*pi*r;
+    float area= pi*r*r;
+    std::cout <<"El diámetro de su círculo es "<< diametro<< ", el perímetro de círculo es "<< perimetro << " y el área de su círculo es "<< area<<std::endl;
     return 0;
 }
-double f(int x)
-{
-    return x*x;
-}
-
